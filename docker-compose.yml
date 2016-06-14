@@ -2,11 +2,11 @@ web:
   image: debian:jessie
   volumes:
     - .:/var/www
-  # tty: true
 drupal:
   build: docker/drupal
   links:
     - db
+    - selenium
   ports:
     - 80
   volumes_from:
@@ -18,3 +18,7 @@ db:
     MYSQL_PASSWORD: drupal
     MYSQL_DATABASE: drupal
     MYSQL_ROOT_PASSWORD: root
+selenium:
+  image: selenium/standalone-firefox
+  ports:
+    - 4444
