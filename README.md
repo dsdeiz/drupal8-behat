@@ -1,10 +1,8 @@
-A simple template for Drupal 8.
+# Drupal 8 Behat Demo
 
-## Technologies:
+## Usage
 
-* Based on [`drupal-project`](github.com/drupal-composer/drupal-project)
-* [Docker](https://www.docker.com/) and Docker Compose
+1. `composer install`
+2. `docker-compose up -d --force-recreate`
 
-## Usage:
-
-Run `composer install` and `docker-compose up -d`.
+*TODO:* `--force-recreate` is an existing issue with [`selenium/standalone`](https://github.com/SeleniumHQ/docker-selenium/issues/91).
