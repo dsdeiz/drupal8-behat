@@ -5,8 +5,7 @@ default:
         - FeatureContext
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\MinkContext
-        - Drupal\DrupalExtension\Context\MessageContext
-        - Drupal\DrupalExtension\Context\DrushContext
+        - Drupal\DrupalExtension\Context\MarkupContext
   extensions:
     Behat\MinkExtension:
       goutte: ~
@@ -15,6 +14,11 @@ default:
       base_url: http://drupal
     Drupal\DrupalExtension:
       blackbox: ~
-      api_driver: drush
+      api_driver: drupal
       drush:
         root: /var/www/web
+      drupal:
+        drupal_root: /var/www/web
+      region_map:
+        left sidebar: "#sidebar-first"
+        content: "#content"
