@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ac8ed39a750880dae5563ec09c2b3bf3",
-    "content-hash": "45a3daeaf8dd023248df32c2dea4b033",
+    "hash": "38de842c8356c71e7c17647db46f3e93",
+    "content-hash": "f9a66ca31731763f7602d1a4697a2d08",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -999,6 +999,49 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "time": "2016-06-01 23:31:24"
+        },
+        {
+            "name": "drupal/devel",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/devel",
+                "reference": "5c6a5068bbf9e3ea0c46ed34777b679a14a38580"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/devel_generate": "self.version",
+                "drupal/devel_node_access": "self.version",
+                "drupal/kint": "self.version",
+                "drupal/webprofiler": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/devel_generate, drupal/devel_node_access, drupal/kint, drupal/webprofiler",
+                "drupal/menu_ui": "Required by drupal/devel_node_access"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Moshe Weitzman",
+                    "email": "weitzman@tejasa.com",
+                    "homepage": "https://github.com/weitzman",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "http://drupal.org/project/devel",
+            "time": "2016-06-06 06:59:02"
         },
         {
             "name": "drush/drush",
@@ -5806,6 +5849,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/devel": 20,
         "guzzlehttp/guzzle": 20
     },
     "prefer-stable": true,
