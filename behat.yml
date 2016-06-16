@@ -4,6 +4,7 @@ default:
       contexts:
         - FeatureContext
         - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
   extensions:
@@ -22,3 +23,8 @@ default:
       region_map:
         left sidebar: "#sidebar-first"
         content: "#content"
+      selectors:
+        message_selector: ".messages"
+        error_message_selector: ".messages.messages--error"
+        success_message_selector: ".messages.messages--status"
+        warning_message_selector: ".messages.messages--warning"
