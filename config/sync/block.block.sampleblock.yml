@@ -1,0 +1,25 @@
+uuid: 34d3769f-fc84-42b1-88a3-d1bee13dd526
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d1d41ba2-ebe6-4cfe-8167-456598d43a30'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: sampleblock
+theme: bartik
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'block_content:d1d41ba2-ebe6-4cfe-8167-456598d43a30'
+settings:
+  id: 'block_content:d1d41ba2-ebe6-4cfe-8167-456598d43a30'
+  label: 'Sample block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
