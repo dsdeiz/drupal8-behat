@@ -1,3 +1,4 @@
+FROM selenium/standalone-firefox
 FROM drupal:8
 
 RUN apt-get update -qq \

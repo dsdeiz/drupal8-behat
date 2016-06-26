@@ -27,3 +27,17 @@ Feature: Test DrupalContext
       | Message            | Some weird message |
     And I press the "Send message" button
     Then I should see the success message "Your message has been sent."
+
+  Scenario: Submit a form in a region
+    Given I am on the homepage
+    When I fill in "Search" with "About" in the "right sidebar"
+    And I press "Search" in the "right sidebar"
+    Then I should see the text "Search for About" in the "content"
+
+  Scenario: Find a button
+    Given I am on the homepage
+    Then I should see the "Search" button
+
+  Scenario: Find a button in a region
+    Given I am on the homepage
+    Then I should see the "Search" button in the "left sidebar"
