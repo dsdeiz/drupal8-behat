@@ -40,4 +40,11 @@ Feature: Test DrupalContext
 
   Scenario: Find a button in a region
     Given I am on the homepage
-    Then I should see the "Search" button in the "left sidebar"
+    Then I should see the "Search" button in the "right sidebar"
+
+  Scenario: Error messages
+   Given I am on "/user"
+   And I fill in "Username" with "Foo"
+   And I fill in "Password" with "Bar"
+   When I press "Log in"
+   Then I should see the error message "Unrecognized username or password."
