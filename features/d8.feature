@@ -28,4 +28,4 @@ Feature: DrupalContext
   Scenario: Find a heading in a region
     Given I am not logged in
     When I am on the homepage
-    Then I should see the heading "Search" in the "left sidebar" region
+    Then I should see the heading "Search" in the "right sidebar" region
