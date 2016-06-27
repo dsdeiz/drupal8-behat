@@ -10,8 +10,8 @@ default:
   extensions:
     Behat\MinkExtension:
       goutte: ~
-      # selenium2:
-      #   wd_host: http://selenium:4444/wd/hub
+      selenium2:
+        wd_host: http://selenium:4444/wd/hub
       base_url: http://drupal
     Drupal\DrupalExtension:
       blackbox: ~
